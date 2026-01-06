@@ -124,7 +124,7 @@ class _MedicalReportPageState extends State<MedicalReportPage> {
             SizedBox(height: 10),
             TextField(controller: _ageController, decoration: InputDecoration(labelText: "Age (numerical)", border: OutlineInputBorder())),
             SizedBox(height: 10),
-            TextField(controller: _physicianController, decoration: InputDecoration(labelText: "Colonoscopist", border: OutlineInputBorder())),
+            TextField(controller: _physicianController, decoration: InputDecoration(labelText: "Gastroenterologist", border: OutlineInputBorder())),
             SizedBox(height: 10),
             TextField(controller: _procedureController, decoration: InputDecoration(labelText: "Procedure", border: OutlineInputBorder())),
             SizedBox(height: 10),
