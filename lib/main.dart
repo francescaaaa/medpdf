@@ -65,18 +65,58 @@ class _MedicalReportPageState extends State<MedicalReportPage> {
           return pw.Column(
             crossAxisAlignment: pw.CrossAxisAlignment.start,
             children: [
-              pw.Row(children: [
-                pw.Expanded(child: pw.Text('PATIENT NAME: ${_nameController.text.toUpperCase()}', style: pw.TextStyle(fontWeight: pw.FontWeight.bold))),
-                pw.Expanded(child: pw.Text('DATE OF PROCEDURE: ${_dateController.text}', style: pw.TextStyle(fontWeight: pw.FontWeight.bold))),
-              ]),
-              pw.SizedBox(height: 8),
-              pw.Row(children: [
-                pw.Expanded(child: pw.Text('AGE: ${_ageController.text} YEARS OLD', style: pw.TextStyle(fontWeight: pw.FontWeight.bold))),
-                pw.Expanded(child: pw.Text('GASTROENTEROLOGIST: ${_physicianController.text.toUpperCase()}', style: pw.TextStyle(fontWeight: pw.FontWeight.bold))),
-              ]),
-              pw.SizedBox(height: 15),
+              pw.Row(
+                crossAxisAlignment: pw.CrossAxisAlignment.start,
+                children: [
+                  pw.Expanded(
+                    child: pw.Column(
+                      crossAxisAlignment: pw.CrossAxisAlignment.start,
+                      children: [
+                        pw.Text('PATIENT NAME:', style: pw.TextStyle(fontWeight: pw.FontWeight.bold, fontSize: 10)),
+                        pw.Text(_nameController.text.toUpperCase(), style: pw.TextStyle(fontWeight: pw.FontWeight.bold)),
+                      ],
+                    ),
+                  ),
+                  pw.SizedBox(width: 20),
+                  pw.Expanded(
+                    child: pw.Column(
+                      crossAxisAlignment: pw.CrossAxisAlignment.start,
+                      children: [
+                        pw.Text('DATE OF PROCEDURE:', style: pw.TextStyle(fontWeight: pw.FontWeight.bold, fontSize: 10)),
+                        pw.Text(_dateController.text, style: pw.TextStyle(fontWeight: pw.FontWeight.bold)),
+                      ],
+                    ),
+                  ),
+                ],
+              ),
+              pw.SizedBox(height: 5),
+              pw.Row(
+                crossAxisAlignment: pw.CrossAxisAlignment.start,
+                children: [
+                  pw.Expanded(
+                    child: pw.Column(
+                      crossAxisAlignment: pw.CrossAxisAlignment.start,
+                      children: [
+                        pw.Text('AGE:', style: pw.TextStyle(fontWeight: pw.FontWeight.bold, fontSize: 10)),
+                        pw.Text('${_ageController.text} YEARS OLD', style: pw.TextStyle(fontWeight: pw.FontWeight.bold)),
+                      ],
+                    ),
+                  ),
+                  pw.SizedBox(width: 20),
+                  pw.Expanded(
+                    child: pw.Column(
+                      crossAxisAlignment: pw.CrossAxisAlignment.start,
+                      children: [
+                        pw.Text('GASTROENTEROLOGIST:', style: pw.TextStyle(fontWeight: pw.FontWeight.bold, fontSize: 10)),
+                        pw.Text(_physicianController.text.toUpperCase(), style: pw.TextStyle(fontWeight: pw.FontWeight.bold)),
+                      ],
+                    ),
+                  ),
+                ],
+              ),
+              pw.SizedBox(height: 10),
               pw.Divider(thickness: 1),
-              pw.SizedBox(height: 15),
+              pw.SizedBox(height: 10),
               pw.Container(
                 width: double.infinity,
                 padding: const pw.EdgeInsets.symmetric(vertical: 10, horizontal: 15),
@@ -85,7 +125,7 @@ class _MedicalReportPageState extends State<MedicalReportPage> {
                 child: pw.Text(_procedureController.text.toUpperCase(), 
                   style: pw.TextStyle(color: PdfColors.white, fontWeight: pw.FontWeight.bold, fontSize: 14)),
               ),
-              pw.SizedBox(height: 25),
+              pw.SizedBox(height: 20),
               pw.Align(
                 alignment: pw.Alignment.center,
                 child: pw.Wrap(
