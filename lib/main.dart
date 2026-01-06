@@ -71,8 +71,8 @@ class _MedicalReportPageState extends State<MedicalReportPage> {
               ]),
               pw.SizedBox(height: 8),
               pw.Row(children: [
-                pw.Expanded(child: pw.Text('GASTROENTEROLOGIST: ${_physicianController.text.toUpperCase()}', style: pw.TextStyle(fontWeight: pw.FontWeight.bold))),
                 pw.Expanded(child: pw.Text('AGE: ${_ageController.text} YEARS OLD', style: pw.TextStyle(fontWeight: pw.FontWeight.bold))),
+                pw.Expanded(child: pw.Text('GASTROENTEROLOGIST: ${_physicianController.text.toUpperCase()}', style: pw.TextStyle(fontWeight: pw.FontWeight.bold))),
               ]),
               pw.SizedBox(height: 15),
               pw.Divider(thickness: 1),
